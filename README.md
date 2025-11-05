@@ -2,14 +2,14 @@
 
 This project demonstrates a Solidity smart contract with event emission capabilities and comprehensive testing using Hardhat.
 
-## 📋 Overview
+##  Overview
 
 The `SimpleStorage` contract is an enhanced version of a basic storage contract that allows users to:
 - Store and retrieve a favorite number
 - Map names to favorite numbers
 - Emit events when storage operations occur
 
-## ✨ Key Enhancement: NumberStored Event
+##  Key Enhancement: NumberStored Event
 
 ### Purpose of the Event
 
@@ -36,7 +36,7 @@ function store(uint256 _favoriteNumber) public {
 
 The event is emitted every time the `store` function is called, capturing the new value being stored.
 
-## 🧪 Test Suite Explanation
+##  Test Suite Explanation
 
 The test suite (`test/SimpleStorage.test.js`) uses Hardhat's testing framework with Chai assertions and Ethers.js. Here's how the tests work:
 
@@ -81,7 +81,7 @@ The test framework:
 4. Executes each test in isolation
 5. Reports results with detailed feedback
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Node.js (v14 or higher)
@@ -116,20 +116,20 @@ SimpleStorage
 5 passing
 ```
 
-## 📝 Bug Fix
+##  Bug Fix
 
 The original contract contained a typo in the `store` function:
 ```solidity
-// ❌ Original (incorrect)
+//  Original (incorrect)
 favoriteNumber = _favorite_number;
 
-// ✅ Fixed
+//  Fixed
 favoriteNumber = _favoriteNumber;
 ```
 
 The variable name used an underscore instead of camelCase, which would have caused a compilation error.
 
-## 🛠 Technology Stack
+##  Technology Stack
 
 - **Solidity ^0.8.20**: Smart contract language
 - **Hardhat**: Ethereum development environment
@@ -137,19 +137,19 @@ The variable name used an underscore instead of camelCase, which would have caus
 - **Chai**: Assertion library for testing
 - **Mocha**: Test framework
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License.
 
-## 🎯 Challenge Completion
+##  Challenge Completion
 
 This repository successfully completes all challenge requirements:
 
-✅ Added `NumberStored` event to the `store` function  
-✅ Created comprehensive tests verifying:
+ Added `NumberStored` event to the `store` function  
+ Created comprehensive tests verifying:
   - The `retrieve` function returns the stored number
   - The `NumberStored` event is emitted with correct values  
-✅ Provided detailed explanation of the event and testing methodology
+ Provided detailed explanation of the event and testing methodology
 
 ---
 
